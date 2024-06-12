@@ -1,4 +1,6 @@
 // Redisへのアクセスを試してみたかった
+// Spring bootのAPI経由でアクセスする
+// 今後消すかも
 export default async function insertRedisSample(count : number) {
     const json = 
     {count: count}
