@@ -1,6 +1,13 @@
 <template>
   <div class="container-style">
-    <h1>ログインページ</h1>
+    <h1>WEBシステム一覧</h1>
+    <h2>{{ $hello('World') }}</h2>
+    <div>
+      <button @click="ccccc()">スタブ試し</button>
+      <button @click="bbbbb()">reqest1</button>
+    </div>
+
+    <CardList />
   </div>
 </template>
 
@@ -8,6 +15,15 @@
 // サーバーディレクトリ直下の処理はimportするとログにエラーが出る（正しく動作はする）
 import insertRedisSample from "../api/redis/insert"
 import getWebSiteIndex from "../api/website/index"
+
+// プラグインの呼び出し
+const { $hello } = useNuxtApp();
+
+// middlewareの呼び出し
+definePageMeta({
+  middleware: 'auth',
+});
+
 
 var count = 0;
 definePageMeta({

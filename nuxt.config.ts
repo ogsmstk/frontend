@@ -2,10 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   // builder: 'webpack',
-  css: [
-    "bootstrap/dist/css/bootstrap.css",
-    "bootstrap-vue-3/dist/bootstrap-vue-3.css",
-  ],
+  css: ["bootstrap/dist/css/bootstrap.min.css"],
   app: {
     head: {
       title: 'Nuxt 3 basic',
